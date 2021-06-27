@@ -1,0 +1,26 @@
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons";
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "clear clear delete add"
+    "seven eight nine subtract"
+    "four five six multiply"
+    "one two three divide"
+    "zero decimal equals equals";
+  grid-gap: 10px;
+}
+
+#equals {
+  flex-grow: 1;
+}
