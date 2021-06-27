@@ -32,7 +32,7 @@ const Buttons = (props) => {
 
   return (
     <React.Fragment>
-      <div className="row">
+      <div className="row grid-container">
         <div id="buttons-grid">
           <button
             id="clear"

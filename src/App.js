@@ -84,6 +84,9 @@ const reducer = (store, action) => {
       mainDisplay += ".";
       return { ...store, mainDisplay: mainDisplay };
     case ACTIONS.CALCULATE:
+      if (op_arr.includes(mainDisplay)) {
+        mainDisplay = "";
+      }
       smallDisplay += mainDisplay;
       let result = eval(smallDisplay);
       smallDisplay = "";
@@ -106,7 +109,7 @@ function App() {
   });
 
   return (
-    <div className="App justify-content-center">
+    <div className="App justify-content-center p-4 rounded text-light d-flex flex-column">
       <Display store={store} dispatch={dispatch}></Display>
       <Buttons store={store} dispatch={dispatch}></Buttons>
     </div>
