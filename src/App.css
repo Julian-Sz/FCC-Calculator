@@ -11533,11 +11533,18 @@ fieldset:disabled .btn {
   }
 }
 
+@media (max-height: 900px) {
+  .App {
+    height: 95vh;
+  }
+}
+
 #display-container {
   background-color: #1e272e;
   font-family: "digitalDisplay";
   font-size: 3rem;
   color: #f12b2b;
+  overflow-x: auto;
 }
 
 @media (min-width: 768px) and (min-height: 800px) {

@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import Buttons from "./Buttons.js";
 import Display from "./Display.js";
 
@@ -11,6 +11,18 @@ export const ACTIONS = {
   ADD_DECIMAL: "add-decimal",
   CALCULATE: "calculate",
 };
+export const NUMS = [
+  { val: 1, word: "one" },
+  { val: 2, word: "two" },
+  { val: 3, word: "three" },
+  { val: 4, word: "four" },
+  { val: 5, word: "five" },
+  { val: 6, word: "six" },
+  { val: 7, word: "seven" },
+  { val: 8, word: "eight" },
+  { val: 9, word: "nine" },
+  { val: 0, word: "zero" },
+];
 
 export const OPERATORS = [
   { val: "+", word: "add" },
@@ -70,7 +82,6 @@ const reducer = (store, action) => {
           mainDisplay = action.payload;
         }
       }
-
       return {
         ...store,
         mainDisplay: mainDisplay,
@@ -87,7 +98,7 @@ const reducer = (store, action) => {
       if (op_arr.includes(mainDisplay)) {
         mainDisplay = "";
       }
-      smallDisplay += mainDisplay;
+      smallDisplay += mainDisplay; //eslint-disable-next-line
       let result = eval(smallDisplay);
       smallDisplay = "";
       return {
@@ -107,6 +118,26 @@ function App() {
     smallDisplay: "",
     displayedIsResult: false,
   });
+
+  useEffect(() => {
+    document.addEventListener("keydown", (event) => {
+      let numsvals = NUMS.map((el) => String(el.val));
+      let operatorsvals = OPERATORS.map((el) => String(el.val));
+      if (numsvals.includes(event.key)) {
+        dispatch({ type: ACTIONS.ADD_NUMBER, payload: event.key });
+      } else if (operatorsvals.includes(event.key)) {
+        dispatch({ type: ACTIONS.ADD_OPERATOR, payload: event.key });
+      } else if (event.key === "." || event.key === ",") {
+        dispatch({ type: ACTIONS.ADD_DECIMAL, payload: undefined });
+      } else if (event.key === "Enter") {
+        dispatch({ type: ACTIONS.CALCULATE, payload: undefined });
+      } else if (event.key === "Backspace" || event.key === "Delete") {
+        dispatch({ type: ACTIONS.DELETE, payload: undefined });
+      } else if (event.key === "Escape") {
+        dispatch({ type: ACTIONS.CLEAR_LINE, payload: undefined });
+      }
+    });
+  }, []);
 
   return (
     <div className="App justify-content-center p-4 rounded text-light d-flex flex-column">

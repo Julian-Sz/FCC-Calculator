@@ -27,6 +27,9 @@
     height: 95vh;
     width: 95vw;
   }
+  @media (max-height: 900px) {
+    height: 95vh;
+  }
   max-width: 800px;
 }
 
@@ -38,6 +41,7 @@
   @media (min-width: 768px) and (min-height: 800px) {
     font-size: 5rem;
   }
+  overflow-x: auto;
 }
 
 #smallDisplay {

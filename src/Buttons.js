@@ -1,20 +1,7 @@
 import React, { useEffect } from "react";
-import { ACTIONS, OPERATORS } from "./App.js";
+import { ACTIONS, OPERATORS, NUMS } from "./App.js";
 
 const Buttons = (props) => {
-  const nums = [
-    { val: 1, word: "one" },
-    { val: 2, word: "two" },
-    { val: 3, word: "three" },
-    { val: 4, word: "four" },
-    { val: 5, word: "five" },
-    { val: 6, word: "six" },
-    { val: 7, word: "seven" },
-    { val: 8, word: "eight" },
-    { val: 9, word: "nine" },
-    { val: 0, word: "zero" },
-  ];
-
   useEffect(() => {
     let otherIDs = [
       { word: "clear" },
@@ -22,7 +9,7 @@ const Buttons = (props) => {
       { word: "decimal" },
       { word: "equals" },
     ];
-    let joinedArray = nums.concat(OPERATORS);
+    let joinedArray = NUMS.concat(OPERATORS);
     joinedArray = joinedArray.concat(otherIDs);
     for (let elem of joinedArray) {
       let button = document.getElementById(elem.word);
@@ -52,7 +39,7 @@ const Buttons = (props) => {
           >
             <i className="bi bi-backspace"></i>
           </button>
-          {nums.map((elem) => {
+          {NUMS.map((elem) => {
             return (
               <React.Fragment key={elem.word}>
                 <button
