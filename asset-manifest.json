@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/FCC-Calculator/static/css/main.a4d4ce6a.chunk.css",
-    "main.js": "/FCC-Calculator/static/js/main.1f1cff4b.chunk.js",
-    "main.js.map": "/FCC-Calculator/static/js/main.1f1cff4b.chunk.js.map",
+    "main.css": "/FCC-Calculator/static/css/main.7062d3c3.chunk.css",
+    "main.js": "/FCC-Calculator/static/js/main.df054e1f.chunk.js",
+    "main.js.map": "/FCC-Calculator/static/js/main.df054e1f.chunk.js.map",
     "runtime-main.js": "/FCC-Calculator/static/js/runtime-main.d36246ca.js",
     "runtime-main.js.map": "/FCC-Calculator/static/js/runtime-main.d36246ca.js.map",
     "static/css/2.f6843eaf.chunk.css": "/FCC-Calculator/static/css/2.f6843eaf.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.88393e8d.chunk.js.map": "/FCC-Calculator/static/js/3.88393e8d.chunk.js.map",
     "index.html": "/FCC-Calculator/index.html",
     "static/css/2.f6843eaf.chunk.css.map": "/FCC-Calculator/static/css/2.f6843eaf.chunk.css.map",
-    "static/css/main.a4d4ce6a.chunk.css.map": "/FCC-Calculator/static/css/main.a4d4ce6a.chunk.css.map",
+    "static/css/main.7062d3c3.chunk.css.map": "/FCC-Calculator/static/css/main.7062d3c3.chunk.css.map",
     "static/js/2.256507d3.chunk.js.LICENSE.txt": "/FCC-Calculator/static/js/2.256507d3.chunk.js.LICENSE.txt",
     "static/media/App.css": "/FCC-Calculator/static/media/digital-7.regular.93911ab1.ttf"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.d36246ca.js",
     "static/css/2.f6843eaf.chunk.css",
     "static/js/2.256507d3.chunk.js",
-    "static/css/main.a4d4ce6a.chunk.css",
-    "static/js/main.1f1cff4b.chunk.js"
+    "static/css/main.7062d3c3.chunk.css",
+    "static/js/main.df054e1f.chunk.js"
   ]
 }
