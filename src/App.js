@@ -40,6 +40,9 @@ const reducer = (store, action) => {
   if (mainDisplay === START_DISPLAY) {
     mainDisplay = "0";
   }
+  if (mainDisplay.includes("Infinity") || mainDisplay.includes("NaN")) {
+    mainDisplay = "0";
+  }
   switch (action.type) {
     case ACTIONS.ADD_NUMBER:
       if (mainDisplay === "0") {
@@ -99,7 +102,7 @@ const reducer = (store, action) => {
         mainDisplay = "";
       }
       smallDisplay += mainDisplay; //eslint-disable-next-line
-      let result = eval(smallDisplay);
+      let result = String(eval(smallDisplay));
       smallDisplay = "";
       return {
         ...store,
